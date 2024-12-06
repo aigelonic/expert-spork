@@ -11,5 +11,7 @@ jobs:
         uses: actions/setup-node@v4.1.0
         with:
           node-version: 20        
-      - run: echo "hello world!"
+      - run: npm i prettier
+      - name: Run Prettier
+        run: npx prettier --check config.json
         
